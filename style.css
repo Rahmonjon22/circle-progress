@@ -1,156 +1,182 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0
+}
+
+.progress-container {
+  display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    background-color: #111116;
+    height: 100vh;
+    align-items: center
+}
+.progress {
+  width: 255px;
+  height: 255px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #222525;
+  line-height: 255px;
   
-  .container {
-    display: flex;
-      justify-content:space-around;
-      flex-wrap: wrap;
-      background-color: #111116;
-      height: 100vh;
-      align-items: center
-  }
-  .progress {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: absolute;
-    background: #222525;
-    line-height: 220px;
-    margin: 20px;
-   
-  }
+}
+.spacecolor {
+  width: 225px;
+  height: 225px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #222525;
+  line-height: 225px;
+  margin: 16px;
+}
+
+
+.progress1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #222525;
+  line-height: 200px;
+  margin: 10px
+ 
+}
+.spacecolor1 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #222525;
+  line-height: 180px;
+  margin: 10px;
+}
+
+
+.progress2 {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  background: #222525;
   
-  .progress1 {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    background: #222525;
-    line-height: 200px;
-    margin: 9px;  
-  }
-  
-  
-  .progress2 {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    background: #222525;
-    line-height: 180px;
-    margin: 10px
-  }
-  
-  
-  .progress .title {position: relative;z-index: 100;}
-  .progress1 .title1 {position: relative;z-index: 100;}
-  .progress2 .title2 {position: relative;z-index: 100;}
-  
-  .progress .overlay {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #222525
-  }
-  .progress1 .overlay1 {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #222525
-  }
-  .progress2 .overlay2 {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: #222525
-  }
-  
-  .progress .left, .progress .right {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 14px solid #f091ff;
-    border-radius: 100px 0px 0px 100px;
-    border-right: 0;
-    transform-origin: right;
-  }
-  
-  .progress1 .left1, .progress1 .right1 {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 10px solid #57a773;
-    border-radius: 100px 0px 0px 100px;
-    border-right: 0;
-    transform-origin: right;
-  }
-  
-  .progress2 .left2, .progress2 .right2 {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 10px solid #ff6419;
-    border-radius: 100px 0px 0px 100px;
-    border-right: 0;
-    transform-origin: right;
-  }
-  
-  
-  .progress .left {animation: load1 2s linear forwards;}
-  .progress1 .left1 {animation: load1 3s linear forwards;}
-  .progress2 .left2 {animation: load1 4s linear forwards;}
-  
-  .progress:nth-of-type(2) .right, .progress:nth-of-type(3) .right {animation: load2 2s linear forwards 2s;}
-  .progress1:nth-of-type(2) .right1, .progress1:nth-of-type(3) .right1 {animation: load2 3s linear forwards 3s;}
-  .progress2:nth-of-type(2) .right2, .progress2:nth-of-type(3) .right2 {animation: load2 4s linear forwards 4s;}
-  
-  .progress:last-of-type .right, .progress:first-of-type .right {animation: load2 2s linear forwards 2s;}
-  .progress1:last-of-type .right1, .progress1:first-of-type .right1 {animation: load4 3s linear forwards 3s;}
-  .progress2:last-of-type .right2, .progress2:first-of-type .right2 {animation: load3 4s linear forwards 4s;}
-  
-  @keyframes load1 {
-    0% {transform: rotate(0deg);}
-  
-    100% {transform: rotate(180deg);}
-  }
-  
-  @keyframes load2 {
-    0% {z-index: 100;transform: rotate(180deg);}
-  
-    100% {z-index: 100;transform: rotate(270deg);}
-  }
-  
-  @keyframes load3 {
-    0% {z-index: 100;transform: rotate(180deg);}
-  
-    100% {
-        z-index: 100;transform: rotate(315deg);}
-  }
-  
-  @keyframes load4 {
-    0% {z-index: 100;transform: rotate(180deg);}
-  
-    100% {
-        z-index: 100;transform: rotate(290deg);}
-  }
+  line-height: 160px;
+  margin: 10px
+}
+
+
+.progress .title {position: relative;z-index: 100;}
+.progress1 .title1 {position: relative;z-index: 100;}
+.progress2 .title2 {position: relative;z-index: 100;}
+
+.progress .overlay {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #222525
+}
+.progress1 .overlay1 {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.progress2 .overlay2 {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.progress .left, .progress .right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 10px solid #f091ff;
+  border-radius: 200px 0px 0px 200px;
+  border-right: 0;
+  transform-origin: right;
+}
+
+.progress1 .left1, .progress1 .right1 {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 10px solid #57a773;
+  border-radius: 100px 0px 0px 100px;
+  border-right: 0;
+  transform-origin: right;
+}
+
+.progress2 .left2, .progress2 .right2 {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 10px solid #ff6419;
+  border-radius: 100px 0px 0px 100px;
+  border-right: 0;
+  transform-origin: right;
+}
+
+
+.progress .left {animation: load1 2s linear  forwards;}
+.progress1 .left1 {animation: load1 3s linear forwards;}
+.progress2 .left2 {animation: load1 4s linear forwards;}
+
+.progress:first-of-type(1) .right, .progress:nth-of-type(3) .right {animation: load2 2s linear forwards 2s;}
+.progress1:nth-of-type(2) .right1, .progress1:nth-of-type(3) .right1 {animation: load2 3s linear forwards 3s;}
+.progress2:nth-of-type(2) .right2, .progress2:nth-of-type(3) .right2 {animation: load2 4s linear forwards 4s;}
+
+.progress:last-of-type  .right, .progress:last-of-type .right {animation: load5 2s linear forwards 2s;} 
+.progress1:last-of-type .right1, .progress1:first-of-type .right1 {animation: load4 3s linear forwards 3s;}
+.progress2:last-of-type .right2, .progress2:first-of-type .right2 {animation: load3 4s linear forwards 4s;}
+
+@keyframes load1 {
+  0% {transform: rotate(0deg);}
+
+  100% {transform: rotate(180deg);}
+}
+
+@keyframes load2 {
+  0% {z-index: 100;transform: rotate(180deg);}
+
+  100% {z-index: 100;transform: rotate(270deg);}
+}
+
+@keyframes load3 {
+  0% {z-index: 100;transform: rotate(180deg);}
+
+  100% {
+      z-index: 100;transform: rotate(315deg);}
+}
+
+@keyframes load4 {
+  0% {z-index: 100;transform: rotate(180deg);}
+
+  100% {
+      z-index: 100;transform: rotate(275deg);}
+}
+@keyframes load5 {
+  0% {z-index: 100;transform: rotate(180deg);}
+
+  100% {
+      z-index: 100;transform: rotate(250deg);}
+}
